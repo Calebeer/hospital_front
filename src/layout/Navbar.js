@@ -36,10 +36,9 @@ export default function Navbar() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <Link className='link active ' to="/createMedicalAppointment" > Paciente </Link>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Criar Paciente
-          </a>
+        <Link className='link active ' to="/" > Início</Link>
+        <Link className='link active ' to="/createMedicalAppointment" > Agendar Consulta </Link>
+        <Link className='link active ' to="/createPacient" > Criar Paciente </Link>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Company
           </a>

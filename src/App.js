@@ -41,16 +41,21 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Paciente from './componentes/Pacient';
 import Navbar from './layout/Navbar';
+import Home from './componentes/Home';
+import CreatePacient from './componentes/CreatePaciente';
+
 
 function App() {
   return (
     <Router>
       <Navbar/>
       <Routes>
-
-      <Route exact path='/createMedicalAppointment'  element={<Paciente/>} />
+      <Route exact path='/' element={<Home/>} />
+      <Route  path='/createMedicalAppointment'  element={<Paciente/>} />
+      <Route  path='/createPacient'  element={<CreatePacient/>} />
       </Routes>
-      {/* <Footer/> */}
+      {/* <Footer/>  */}
+      
     </Router>
 )}
 
