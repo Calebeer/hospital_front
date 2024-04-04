@@ -55,7 +55,6 @@ function App() {
       <Route  path='/createPacient'  element={<CreatePacient/>} />
       </Routes>
       {/* <Footer/>  */}
-      
     </Router>
 )}
 
