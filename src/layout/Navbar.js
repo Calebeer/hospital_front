@@ -3,6 +3,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { ArrowPathIcon, Bars3Icon, CursorArrowRaysIcon, FingerPrintIcon, SquaresPlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -15,6 +16,18 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const location = useLocation();
+
+  // Verifica se a rota atual é a de login
+  const isLoginPage = location.pathname === '/login';
+
+  // Se for a página de login, não renderize a barra de navegação
+  if (isLoginPage) {
+    return null;
+  }
+
+
 
   return (
     <header className="bg-white">
